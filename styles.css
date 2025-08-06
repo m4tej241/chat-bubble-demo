@@ -122,6 +122,9 @@
     width: 30vw;
     height: 85vh;
     border-radius: 12px;
+    transition: width 0.4s ease, height 0.4s ease;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
   }
 
   #close-chat, 
@@ -153,30 +156,3 @@
   #expand-chat:hover {
     color: #fff;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    #copilot-chat {
-        background: rgba(30, 30, 30, 0.9);
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    #close-chat,
-    #reset-chat {
-      color: #ccc;
-    }
-  
-    #close-chat:hover,
-    #reset-chat:hover {
-      color: #fff;
-    }
-
-    #expand-chat {
-        color: #ccc;
-      }
-    
-    #expand-chat:hover {
-        color: #fff;
-    }
-  }
-  
