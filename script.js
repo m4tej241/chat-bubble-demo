@@ -8,6 +8,8 @@ const expand = document.getElementById('expand-chat');
 // Restore open state
 if (localStorage.getItem('chatOpen') === 'true') {
   openChat();
+} else {
+  bubble.classList.remove('no-glow');
 }
 
 bubble.addEventListener('click', () => {
@@ -39,11 +41,13 @@ iframe.onload = () => {
 
 function openChat() {
   chat.classList.add('show');
+  bubble.classList.add('no-glow');
   localStorage.setItem('chatOpen', 'true');
 }
 
 function closeChat() {
   chat.classList.remove('show');
+  bubble.classList.remove('no-glow');
   localStorage.setItem('chatOpen', 'false');
 }
 
