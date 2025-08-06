@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Copilot Chat Bubble</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Chat bubble button -->
+  <div id="chat-bubble" title="Chat with Copilot">
+    <img src="em_muni.png" alt="Chat Icon" />
+  </div>
+
+  <!-- Chat window -->
+  <div id="copilot-chat">
+    <button id="close-chat" aria-label="Close chat" title="Close chat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/>
+      </svg>
+    </button>
+    
+    <button id="reset-chat" aria-label="Reset chat" title="Reset chat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M12 6V3L8 7l4 4V8c2.76 0 5 2.24 5 5s-2.24 5-5 5a5.002 5.002 0 0 1-4.9-4h-2.02a7.002 7.002 0 0 0 6.92 6 7 7 0 0 0 0-14z"/>
+      </svg>
+    </button>
+    
+    <button id="expand-chat" aria-label="Expand chat" title="Expand chat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <polyline id="expand-arrow" points="6 15 12 9 18 15"/>
+      </svg>
+    </button>
+    
+    <div id="chat-loading">Loading...</div>
+    <iframe
+      id="chat-iframe"
+      src="https://copilotstudio.microsoft.com/environments/bad288ed-c93d-eb19-94f6-563b8f156651/bots/cr27b_agent_UsFqOI/webchat?__version__=2"
+      frameborder="0">
+    </iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
